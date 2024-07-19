@@ -1,0 +1,134 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+body{
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f2f2f2;
+}
+#checkbox{
+  appearance: none;
+}
+#checkbox:checked #mode-label{
+  background: #2196F3;
+}
+#mode-label{
+    padding: 10px;
+    transition: .1s ease-in-out;
+}
+#mode-label:hover{
+    cursor: pointer;
+}
+header {
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+main .action-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+main .action-bar #search{
+    background: #fff;
+    color: #848484;
+    height: 56px;
+    width: 480px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+
+    padding-left: 24px;
+    border-radius: 4px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+main .action-bar #search-input{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 56px;
+
+}
+main .action-bar #select-region{
+    padding: 14px 24px;
+    background: #fff;
+    color:  #111517;
+    font-size: 18px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+main #cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 74px;
+}
+main .card{
+    background: #fff;
+    color: #000;
+    padding: 16px;
+    width: 264px;
+    height: 336px;
+    border-radius: 4px;
+    padding: 0;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+main .card-body {
+    padding: 24px;
+}
+main .card-body .card-title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+main .card-body strong {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-right: 10px;
+}
+main .card-body span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+
+
+
+/* Media for mobile*/
+@media only screen and (max-width: 776px){
+    main .action-bar {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    #select-region, #search {
+        /* width: 50%; */
+    }
+    #select-region{
+    }
+    #cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 576px){
+    main .action-bar #search {
+        max-width: max-content;
+    }
+    #select-region{
+        width: 200px;
+    }
+}
