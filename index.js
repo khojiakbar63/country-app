@@ -30,7 +30,7 @@ cards.addEventListener('click', (e)=>{
     if(e.target.getAttribute('id') === 'card-btn' && e.target.tagName  === 'BUTTON'){
         const countryCode = e.target.getAttribute('data-id')
         localStorage.setItem('selectedCountryCode', countryCode);
-        location.href = '/pages/detail.html';
+        location.href = './pages/detail.html';
     }
 
    
