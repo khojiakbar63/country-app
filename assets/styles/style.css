@@ -78,8 +78,8 @@ main #cards {
     margin-top: 20px;
 }
 main .card{
-    /* background: #fff; */
-    /* color: #000; */
+    background: #fff; 
+    color: #000; 
     padding: 16px;
     width: 264px;
     height: 336px;
@@ -126,7 +126,7 @@ body{
     background-color: #f2f2f2;
 }
 #card-btn {
-    color: #848484;
+    color: #134B70;
     display: block;
 }
 
@@ -140,12 +140,12 @@ body{
     color: #fff !important;
 }
 .dark-card {
-    background-color: #000 !important;
-    color: #fff !important;
+    /* background-color: #000 !important;
+    color: #fff !important; */
 }
 .light-card {
-    background-color: #fff !important;
-    color: #000 !important;
+    /* background-color: #fff !important;
+    color: #000 !important; */
 }
 
 /* Media for mobile*/

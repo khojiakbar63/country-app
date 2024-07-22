@@ -1,8 +1,5 @@
 const backBtn = $('#back-btn')
-
-
-
-
+const detailCard = $('.detail-card')
 
 // Back btn
 backBtn.addEventListener('click', ()=>{
@@ -10,7 +7,6 @@ backBtn.addEventListener('click', ()=>{
 })
 
 const countryCode = localStorage.getItem('selectedCountryCode')
-const detailCard = $('.detail-card')
 
 if(countryCode){
     fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)

@@ -15,8 +15,10 @@ function renderOnBrowser(db, theme){
             <strong>Population:</strong><span>${country.population}</span>
             <strong>Region:</strong><span>${country.region}</span><br>
             <strong>Capital:</strong><span>${country.capital ? country.capital[0] : 'No Capital'}</span>
-            
-            <button id='card-btn' data-id='${country.cca3}'">Detail</button>
+            <div class='flex items-center justify-between mt-[10px]'>
+                <div></div>
+                <button  id='card-btn' data-id='${country.cca3}'"><i class="bi bi-folder-symlink"></i></button>
+            </div>
         </div>
 `)
 
@@ -31,43 +33,7 @@ cards.addEventListener('click', (e)=>{
         location.href = '/pages/detail.html';
     }
 
-    if(countryCode){
-        fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
-        .then(res => res.json())
-        .then(data => {
-            const country = data[0]
-            console.log(country);
-            detailCard.innerHTML = ''
-            detailCard.innerHTML = `
-            <img class="detail-img" src="${country.flags.svg}" alt="flag">
-
-            <div class="detail-card-wrapper flex flex-start flex-col" >
-                <h2 class="card-title">Germany</h2>
-                <div class="detail-card-body">
-                    <div>
-                        <p><strong>Native Name: </strong><span>Germany</span><br></p>
-                        <p><strong>Population: </strong><span>234 567 87 654</span><br></p>
-                        <p><strong>Region: </strong><span>Europe</span><br></p>
-                        <p><strong>Sub Region: </strong><span>Western Europe</span><br></p>
-                        <p><strong>Capital: </strong><span>Berlin</span><br></p>
-                    </div>
-                    <div>
-                        <p><strong>Top Level Domain: </strong><span>:ge</span><br></p>
-                        <p><strong>Currencies: </strong><span>Euro</span><br></p>
-                        <p><strong>Languages: </strong><span>German, English, Russian</span></p>
-                    </div>
-                </div>
-
-                <div class="neighbours">
-                    <strong>Border Countries:</strong><span><button>France</button><button>Ukraine</button><button>Russia</button></span>
-                </div>
-            </div>
-            `
-            
-        })
-    }else {
-        detailCard.innerHTML = '<h1>Data not found</h1>'
-    }
+   
 })
 
 
