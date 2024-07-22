@@ -1,0 +1,64 @@
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+.detail-img{
+    width: 560px;
+    height: 401px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.detail-img:hover {
+    box-shadow: rgba(50, 50, 93, 0.539) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+.card-title{
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 43px;
+    color: #111517;
+    margin-bottom: 23px;
+}
+.detail-card-body {
+    width: 798px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 141px;
+}
+.detail-card-body p {
+    margin: 0 5px 20px 0;
+
+}
+.detail-card-body strong{
+    font-weight: 600;
+    font-style: 16px;
+    line-height: 32px;
+    color: #171115;
+}
+.detail-card-span span{
+    font-weight: 400;
+    font-style: 16px;
+    line-height: 32px;
+    color: #17111589;
+}
+.neighbours button{
+    width: 96px;
+    height: 28px;
+    margin-left: 10px;
+    border-radius: 2px;
+    transition: .1s ease-out;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.neighbours button:hover{
+    box-shadow: rgba(99, 99, 99, 0.493) 0px 2px 8px 0px;
+}
+.neighbours button:active{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.detail-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}

@@ -1,17 +1,14 @@
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
-body{
-    font-family: "Nunito Sans", sans-serif;
-    background-color: #f2f2f2;
-}
+
 #checkbox{
   appearance: none;
-}
-#checkbox:checked #mode-label{
-  background: #2196F3;
 }
 #mode-label{
     padding: 10px;
@@ -21,6 +18,12 @@ body{
     cursor: pointer;
 }
 header {
+    background: #fff;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 header .wrapper {
@@ -33,13 +36,13 @@ main .action-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 100px;
+    padding-top: 100px;
 }
-main .action-bar #search{
+main .action-bar .search{
     background: #fff;
     color: #848484;
     height: 56px;
-    width: 480px;
+    width: 60%;
     min-width: 280px;
     display: flex;
     align-items: center;
@@ -55,12 +58,13 @@ main .action-bar #search-input{
     height: 56px;
 
 }
-main .action-bar #select-region{
+main .action-bar #select-region {
     padding: 14px 24px;
     background: #fff;
     color:  #111517;
     font-size: 18px;
     height: 56px;
+    width: 30%;
     border-radius: 4px;
     border: none;
     outline: none;
@@ -69,18 +73,33 @@ main .action-bar #select-region{
 main #cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 74px;
+    margin-top: 20px;
 }
 main .card{
-    background: #fff;
-    color: #000;
+    /* background: #fff; */
+    /* color: #000; */
     padding: 16px;
     width: 264px;
     height: 336px;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 0;
+    transition: .1s ease-in-out;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+main .card:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 7px 8px;
+}
+main .card:active {
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 5px 6px;
+
+}
+main .card img {
+    border-radius: 8px 8px 0 0;
+    width: 264px;
+    height: 160px;
 }
 main .card-body {
     padding: 24px;
@@ -102,9 +121,32 @@ main .card-body span {
     font-weight: 300;
     line-height: 16px;
 }
+body{
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f2f2f2;
+}
+#card-btn {
+    color: #848484;
+    display: block;
+}
 
-
-
+.bg-dark {
+    background-color: #2B3844 !important;
+    color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px !important;
+}
+.bg-light-dark {
+    background-color: #202C36 !important;
+    color: #fff !important;
+}
+.dark-card {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.light-card {
+    background-color: #fff !important;
+    color: #000 !important;
+}
 
 /* Media for mobile*/
 @media only screen and (max-width: 776px){
@@ -114,11 +156,15 @@ main .card-body span {
         align-items: flex-start;
         gap: 20px;
     }
-    #select-region, #search {
-        /* width: 50%; */
+    
+    #search {
+        width: 100%;
     }
-    #select-region{
-    }
+
+    main .action-bar #select-region{
+        width: 100%;
+    } 
+   
     #cards {
         flex-direction: column;
         align-items: center;
@@ -126,9 +172,9 @@ main .card-body span {
 }
 @media only screen and (max-width: 576px){
     main .action-bar #search {
-        max-width: max-content;
+        /* max-width: max-content; */
     }
     #select-region{
-        width: 200px;
+        width: 100%;
     }
 }
