@@ -17,7 +17,7 @@ function renderOnBrowser(db, theme){
             <strong>Capital:</strong><span>${country.capital ? country.capital[0] : 'No Capital'}</span>
             <div class='flex items-center justify-between mt-[10px]'>
                 <div></div>
-                <button  id='card-btn' data-id='${country.cca3}'"><i class="bi bi-folder-symlink"></i></button>
+                <button  id='card-btn' data-id='${country.cca3}'">See more...</button>
             </div>
         </div>
 `)

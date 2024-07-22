@@ -126,8 +126,15 @@ body{
     background-color: #f2f2f2;
 }
 #card-btn {
-    color: #134B70;
+    color: #134b7084;
     display: block;
+    transition: .1s;
+}
+#card-btn:hover {
+    color: #134B70;
+}
+#card-btn:active {
+    color: #134b7032;
 }
 
 .bg-dark {
